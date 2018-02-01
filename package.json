@@ -1,0 +1,62 @@
+{
+	"name": "gulp-project",
+	"version": "1.0.0",
+	"description": "Desc",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"browser-sync": "^2.23.5",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.1.0",
+		"gulp-babel": "^7.0.1",
+		"gulp-clean-css": "^3.9.2",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-jade": "^1.1.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-rigger": "^0.5.8",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.3",
+		"gulp-uglify": "^2.0.0",
+		"gulp-watch": "^5.0.0",
+		"imagemin-pngquant": "^5.0.1",
+		"require-dir": "^0.3.2",
+		"rimraf": "^2.6.2",
+		"run-sequence": "^2.2.1"
+	},
+	"config": {
+		"build": {
+			"html": "build/",
+			"js": "build/js/",
+			"css": "build/css/",
+			"img": "build/img/",
+			"fonts": "build/fonts/"
+		},
+		"src": {
+			"jade": "src/*.jade",
+			"html": "src/*.html",
+			"js": "src/js/*.js",
+			"style": "src/style/*.sass",
+			"img": "src/img/**/*.*",
+			"fonts": "src/fonts/**/*.*"
+		},
+		"watch": {
+			"jade": "src/**/*.jade",
+			"html": "src/**/*.html",
+			"js": "src/js/**/*.js",
+			"style": "src/style/**/*.sass",
+			"img": "src/img/**/*.*",
+			"fonts": "src/fonts/**/*.*"
+		},
+		"clean": "./build"
+	},
+	"configServer": {
+		"server": {
+			"baseDir": "./build"
+		},
+		"files": "['build/*.html', 'build/css/*.css', 'build/img/*.*', 'build/js/*.js']",
+		"tunnel": true,
+		"host": "localhost",
+		"port": 3000,
+		"logPrefix": "Zinovev Pasha"
+	}
+}
