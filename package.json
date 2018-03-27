@@ -10,8 +10,9 @@
 		"gulp-autoprefixer": "^4.1.0",
 		"gulp-babel": "^7.0.1",
 		"gulp-clean-css": "^3.9.2",
+		"gulp-concat": "^2.6.1",
 		"gulp-imagemin": "^4.1.0",
-		"gulp-jade": "^1.1.0",
+		"gulp-pug": "^3.3.0",
 		"gulp-rename": "^1.2.2",
 		"gulp-rigger": "^0.5.8",
 		"gulp-sass": "^3.1.0",
@@ -32,7 +33,7 @@
 			"fonts": "build/fonts/"
 		},
 		"src": {
-			"jade": "src/*.jade",
+			"pug": "src/*.pug",
 			"html": "src/*.html",
 			"js": "src/js/*.js",
 			"style": "src/style/*.sass",
@@ -40,7 +41,7 @@
 			"fonts": "src/fonts/**/*.*"
 		},
 		"watch": {
-			"jade": "src/**/*.jade",
+			"pug": "src/**/*.pug",
 			"html": "src/**/*.html",
 			"js": "src/js/**/*.js",
 			"style": "src/style/**/*.sass",
@@ -56,7 +57,7 @@
 		"files": "['build/*.html', 'build/css/*.css', 'build/img/*.*', 'build/js/*.js']",
 		"tunnel": true,
 		"host": "localhost",
-		"port": 3000,
+		"port": 3030,
 		"logPrefix": "Zinovev Pasha"
 	}
 }

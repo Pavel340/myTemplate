@@ -7,6 +7,7 @@ var	gulp = require('gulp'),
 	browserSync = require("browser-sync"),
 	rename = require('gulp-rename'),
 	babel = require("gulp-babel"),
+	concat = require("gulp-concat"),
 	reload = browserSync.reload;
 
 gulp.task('js', function () {
@@ -19,4 +20,14 @@ gulp.task('js', function () {
         .pipe(rename({suffix: '.min', prefix : ''}))
         .pipe(gulp.dest(cfg.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
+});
+
+// Запускать отдельно, при добавлении новой библиотеки в bower
+gulp.task('libs', function() {
+	return gulp.src([
+		'./bower_components/modernizr/modernizr.js',
+		])
+		.pipe(concat('libs.min.js'))
+		.pipe(uglify()) //Minify libs.js
+		.pipe(gulp.dest(cfg.build.js));
 });

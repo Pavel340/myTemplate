@@ -6,6 +6,7 @@ gulp.task('build', function () {
 	runSequence(
 		'html',
 		'js',
+		'libs',
 		'style',
 		'fonts',
 		'image'

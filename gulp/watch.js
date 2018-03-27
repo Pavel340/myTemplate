@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     cfg = require('../package.json').config;
 
 gulp.task('watch', function(){
-    watch([cfg.watch.jade], function(event, cb) {
+    watch([cfg.watch.pug], function(event, cb) {
         gulp.start('html');
     });
     watch([cfg.watch.style], {readDelay: 1000}, function(event, cb) {
